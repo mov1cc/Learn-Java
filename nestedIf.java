@@ -1,34 +1,30 @@
-import java.util.Scanner;
-public class nestedIf{
-    public static void main(String[]args){
-        //HEADER
-        System.out.println("=====COMPOUND INTEREST CALCULATOR=====");
-        //DEKLARASI VARIABEL
-        int principal;
-        double interest,time,compounded,hasil,totalbunga;
-        char s='$';
-        //INPUT SCANNER USER
-        Scanner sc=new Scanner(System.in);
+public class Main{
+    public static void nestedIf(String[]args){
         
-        System.out.print("MASUKAN MODAL AWAL: "+s);
-        principal=sc.nextInt();
-        System.out.print("MASUKAN BUNGA(DALAM PERSEN): ");
-        interest=sc.nextDouble()/100;
+        boolean isStudent=true;
+        boolean isSenior=true;
+        double price=9.99;
         
-        System.out.print("MASUKAN WAKTU: ");
-        time=sc.nextDouble();
-        
-        System.out.print("MASUKAN FREKUENSI PENGGABUNGAN BUNGA PER TAHUN: ");
-        compounded=sc.nextDouble();
-        //PERHITUNGAN DNG RUMUS COMPOUND INTEREST DAN TOTAL BUNGA
-        hasil=principal*Math.pow((1+interest//compounded),compounded*time);
-        
-        totalbunga=hasil-principal;
-        
-        sc.close();
-        //OUTPUT
-        System.out.println("======================================");
-        System.out.printf("HASIL AKHIR: %c%,.0f\n",s,hasil);
-        System.out.printf("TOTAL BUNGA: %c%,.0f\n",s,totalbunga);
+        if(isStudent){
+            if(isSenior){
+                System.out.println("You get a senior discount 20%");
+                System.out.println("You get a student discount 10%");
+                price*=0.8*0.9;
+            }
+            else{
+            System.out.println("You get a student discount 10%");
+            price*=0.9;
+            }
+        }
+        else{
+            if(isSenior){
+                System.out.println("You get a senior discount 20%");
+               price*=0.8;
+            }
+            else{
+            price*=1;
+            }
+        }
+        System.out.printf("The price of ticket is: $%.2f",price);
     }
 }
