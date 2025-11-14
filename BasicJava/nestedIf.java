@@ -1,6 +1,6 @@
 package BasicJava;
 public class nestedIf {
-    public static void nestedIf(String[] args) {
+    public static void main(String[] args) {
 
         boolean isStudent = true;
         boolean isSenior = true;

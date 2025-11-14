@@ -1,6 +1,6 @@
 package miniProject;
 import java.util.Scanner;
-public class madLibs {
+public class madLibs{
     public static void main(String[]args){
         //DEKLARASI VARIABEL
         String namakarakter;
