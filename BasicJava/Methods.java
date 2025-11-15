@@ -23,9 +23,30 @@ public class Methods {
 
         HappyBirtday2(name2, age2);
 
+        // double result=square(3);
+        // System.out.println(result);
+
+        System.out.println(square(3));
+
+        // double result=cube(3);
+        // System.out.println(result);
+
+        System.out.println(cube(3));
+
+        String FullName = getFullName("Spongebob", "Squarepants");
+        System.out.println(FullName);
+
+        int age = 21;
+
+        if (AgeCheck(age)) {
+            System.out.println("You may sign up!");
+        } else {
+            System.out.println("You must be 18+ to sign up!");
+        }
+
     }
 
-    // Method Way
+    // Method Way for Birthday
     static void HappyBirtday() {
 
         int age = 20;
@@ -37,7 +58,7 @@ public class Methods {
         System.out.println("Cihuy Acumalaka\n");
     }
 
-    // Method Way with Parameter
+    // Method Way with Parameter for Birtday
     static void HappyBirtday2(String BirthDayMan, int NewAge) {
 
         System.out.printf("Happy Birtday to %s!\n", BirthDayMan);
@@ -45,5 +66,33 @@ public class Methods {
         System.out.println("Now you are Senior!");
         System.out.println("Good job!\n");
 
+    }
+
+    // Method Square Numbers
+
+    static double square(double number) {
+        return number * number;
+    }
+
+    // Method Cube
+
+    static double cube(double number) {
+        return number * number * number;
+    }
+
+    // Method FullName
+
+    static String getFullName(String first, String last) {
+        return first + " " + last;
+    }
+
+    // Method AgeCheck
+
+    static boolean AgeCheck(int age) {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
